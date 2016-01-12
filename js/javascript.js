@@ -2,6 +2,15 @@ var apiBaseUrl = 'https://api.themoviedb.org/3/movie/';
 var apiKeyString = '?api_key=300d2fb47e3f5f8d5e569ce27884acdc';
 var movieDetailsTemplate = Handlebars.compile($("#movie-template").html());
 
+function listado(){
+  $.get(apiBaseUrl + "top_rated" + apiKeyString, function( data ) {
+    console.log( data );
+    for (var i = 0; i < data.results.length; i++) {
+      $( "#lista" ).append( "<li style='list-style: none;'>" + data.results[i].original_title + "</li>" );
+    };
+  });
+}
+
 function information() {
   var id = $(this).data('movieId');
   $.get(apiBaseUrl + id + apiKeyString, function(data){
