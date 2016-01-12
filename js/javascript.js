@@ -1,3 +1,5 @@
+// comentario
+
 function traer(){
   $.get( "https://api.themoviedb.org/3/movie/top_rated?api_key=300d2fb47e3f5f8d5e569ce27884acdc", function( data ) {
     console.log( data );
