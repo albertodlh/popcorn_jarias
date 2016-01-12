@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta http-equiv="Conten-Type" content="text/html; charset=UTF-8"/>
+    <title>Popcorn</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+  </head>
+  <body onload="traer()">
+    <header>
+      <div class="container">
+        <div class="perfil">
+          <img class="image-perfil" src="images/perfil-image.jpeg" alt="Woman smiling" />
+          <a class="link-nombre" href="#">Emilia Clarke</a>
+          <span class="cerrar"><a class="cerrar-sesion" href="#">Sign Out</a></span>
+        </div>
+
+        <h1 class="logo"><img src="images/logo.png" alt="popcorn"/></h1>
+          <nav class="navegation">
+            <a class="links" href="#"><span class="link-seleccion">Home</span></a>
+            <a class="links" href="#">Popular Movies</a>
+            <a class="links" href="#">Top Rapted</a>
+            <a class="links" href="#">Upcoming</a>
+          </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="barra-busqueda">
+        <input id="search" type="search" size="90" placeholder="Search for movies..."/>
+      </div>
+      <div>
+        <section class="secciones">
+          <h1 class="sub-title">My Favorites</h1>
+          <ul id="lista">
+          </ul>
+        </section>
+
+        <section class="secciones">
+          <h1 class="sub-title">Popular Movies</h1>
+          <div id="popular">
+            
+          </div>
+        </section>
+
+        <section class="secciones">
+          <h1 class="sub-title">Top Rated</h1>
+          <div id="top_rated">
+            
+          </div>
+        </section>
+
+        <section class="secciones">
+          <h1 class="sub-title">Upcoming</h1>
+          <div id="upcoming">
+            
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

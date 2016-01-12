@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background: #F5ECCE;
+}
+
+.navegation {
+  clear: right;
+  float: right;
+  margin-top: 35px;
+}
+
+.logo {
+  display: inline-block;
+  float: left;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: solid;
+  border-color: red;
+}
+
+.div-header {
+  margin: 0px 110px;
+  padding-top: 10px;
+}
+
+.image-perfil {
+  height: 15px;
+  width: 15px;
+}
+
+.perfil {
+  float: right;
+}
+
+.link-nombre {
+  color: red;
+  font-family: arial;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.links {
+  color: red;
+  font-family: arial;
+  font-size: 16px;  
+  text-decoration: none;
+}
+
+.cerrar-sesion {
+  color: gray;
+  font-family: arial;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.cerrar {
+  border-left: solid gray 2px;
+  padding-left: 3px;
+}
+
+.navegation a {
+  margin-left: 35px;
+}
+
+.link-seleccion {
+  font-weight: bold;
+}
+
+.navegation a:hover {
+  color: gray;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 864.7px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.barra-busqueda {
+  text-align: center;
+}
+
+.barra-busqueda input {
+  margin: 0 auto;
+}
+
+
+.sub-title {
+  border-bottom: solid black 1px;
+  color: red;
+  font-family: arial;
+}
+
+.secciones{
+  margin-top: 40px;
+}
+.images-peliculas {
+  border-radius: 5px;
+  border-right: 3px solid red;
+  border-top: 3px solid red;
+  height: 200px;
+  margin: 20px 3.9px 0;
+  width: 130px;
+}
+
+.secciones p {
+  color: gray;
+  font-family: arial;
+  margin-top: 25px;
+}
+
+/*#search:focus {
+  background: white;
+}*/
