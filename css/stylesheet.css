@@ -110,12 +110,39 @@ header {
   width: 130px;
 }
 
-.secciones p {
+section > p {
   color: gray;
   font-family: arial;
   margin-top: 25px;
 }
 
+.backdrop_path {
+  margin: 5px 10px 0 0; 
+  height: 200px;
+  width: 300px;
+  border-right: 3px solid red;
+  border-top: 3px solid red;
+  border-radius: 5px;
+}
+
+#cont-image-infor {
+  display: inline-block;
+}
+
+.cont-data-infor {
+  display: inline-block;
+  float: right;
+}
+.title-data {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: red;
+}
+
+/*.cont-data-infor {
+  display: inline-block;
+  clear: right;
+}*/
 /*#search:focus {
   background: white;
 }*/
