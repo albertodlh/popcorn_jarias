@@ -1,5 +1,8 @@
+var apiBaseUrl = 'https://api.themoviedb.org/3/movie/';
+var apiKeyString = '?api_key=300d2fb47e3f5f8d5e569ce27884acdc';
+
 function listado(){
-  $.get(   "https://api.themoviedb.org/3/movie/top_rated?api_key=300d2fb47e3f5f8d5e569ce27884acdc", function( data ) {
+  $.get(apiBaseUrl + "top_rated" + apiKeyString, function( data ) {
     console.log( data );
     for (var i = 0; i < data.results.length; i++) {
       $( "#lista" ).append( "<li style='list-style: none;'>" + data.results[i].original_title + "</li>" );
@@ -8,27 +11,9 @@ function listado(){
   // peliculas('popular', 0);
 }
 
-function peliculas(pelicula){
-  $.get( "https://api.themoviedb.org/3/movie/" + pelicula + "?api_key=300d2fb47e3f5f8d5e569ce27884acdc", function( data ) {
-    console.log( data );
-    for (var i = 0; i < data.results.length; i++) {
-      $("#" + pelicula).append("<img class='images-peliculas' src='http://image.tmdb.org/t/p/w300/" + data.results[i].poster_path + "' onclick='information(" + data.results[i].id + ");'/>");
-    };
-  });
-  //if(sw == 0) peliculas('top_rated', 1);
-  //else if(sw == 1) peliculas('upcoming', 2);
-}
-
-$(function(){ // body onload
-
-  $('.js-movie-container').each(function(inx){
-    peliculas(this.id);
-  });
-
-});
-
-function information(id) {
-  $.get("https://api.themoviedb.org/3/movie/" + id + "?api_key=300d2fb47e3f5f8d5e569ce27884acdc", function(data){
+function information() {
+  var id = $(this).data('movieId');
+  $.get(apiBaseUrl + id + apiKeyString, function(data){
     console.log(data);
     $("#container-information").html("");
     $("#container-information").append("<h1 class='sub-title'>Information</h1>");
@@ -40,5 +25,30 @@ function information(id) {
     $("#cont-description-infor").append("<p>" + data.overview + "<p/>");
     //$("#cont-data-infor").append("<p>" + data.overview + "<p/>");
   });
+}
 
-  }
+function peliculas(tipo){
+  var $imgEl, imgSrc;
+  $.get(apiBaseUrl + tipo + apiKeyString, function( data ) {
+    console.log( data );
+    for (var i = 0; i < data.results.length; i++) {
+      imgSrc = 'http://image.tmdb.org/t/p/w300/' + data.results[i].poster_path;
+      $imgEl = $('<img/>')
+        .addClass('images-peliculas')
+        .attr('src', imgSrc)
+        .data('movieId', data.results[i].id);
+      $imgEl.on('click', information);
+      $("#" + tipo).append($imgEl);
+    };
+  });
+}
+
+$(function(){
+
+  $('.js-movie-container').each(function(inx){
+    peliculas(this.id);
+  });
+
+});
+
+
