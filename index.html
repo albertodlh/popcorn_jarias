@@ -4,8 +4,26 @@
     <meta http-equiv="Conten-Type" content="text/html; charset=UTF-8"/>
     <title>Popcorn</title>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+    <script id="movie-template" type="text/x-handlebars-template">
+      <h1 class='sub-title'>Information</h1>
+      <div class='cont-image-infor'>
+        <img class='backdrop_path' src='http://image.tmdb.org/t/p/w300/{{ backdrop_path }}' />
+        <div class='cont-data-infor'>
+          <p><span class='title-data'>Title: </span> {{ original_title }} </p>
+          <p><span class='title-data'>Tagline: </span> {{ tagline }} </p>
+          <p><span class='title-data'>Revenue: </span> {{ revenue }} </p>
+        </div>
+      </div>
+      <div id='cont-description-infor'>
+        <p>{{ overview }}<p/>
+      </div>
+    </script>
+
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
     <script type="text/javascript" src="js/javascript.js"></script>
+
   </head>
   <body>
     <header>
@@ -39,7 +57,7 @@
 
         <section class="secciones">
           <div id="container-information">
-            
+
           </div>
           <!--<h1 class="sub-title">Information</h1>
           <ul id="information-movie">

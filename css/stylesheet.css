@@ -117,7 +117,7 @@ section > p {
 }
 
 .backdrop_path {
-  margin: 5px 10px 0 0; 
+  margin: 5px 10px 0 0;
   height: 200px;
   width: 300px;
   border-right: 3px solid red;
@@ -125,7 +125,7 @@ section > p {
   border-radius: 5px;
 }
 
-#cont-image-infor {
+.cont-image-infor {
   display: inline-block;
 }
 
