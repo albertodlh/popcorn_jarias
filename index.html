@@ -8,16 +8,16 @@
     <link type="image/x-icon" href="images/popcorn-logo.gif" rel="shortcut icon" /> 
 
     <script id="movie-template" type="text/x-handlebars-template">
-      <h1 class='title-seccion'>Information</h1>
+      <h1 class='movie-datails__title'>Information</h1>
       <div class='movie-datails__inf'>
-        <img class='movie-datails__inf__img' src='http://image.tmdb.org/t/p/w300/{{ backdrop_path }}' />
-        <div class='movie-datails__inf__attr'>
-          <p><span class='movie-datails__info__attr__title-data'>Title: </span> {{ original_title }} </p>
-          <p><span class='movie-datails__info__attr__title-data'>Tagline: </span> {{ tagline }} </p>
-          <p><span class='movie-datails__info__attr__title-data'>Revenue: </span> {{ revenue }} </p>
+        <img class='movie-datails__img' src='http://image.tmdb.org/t/p/w300/{{ backdrop_path }}' />
+        <div class='movie-datails__attr-list'>
+          <p><span class='movie-datails__attr'>Title: </span> {{ original_title }} </p>
+          <p><span class='movie-datails__attr'>Tagline: </span> {{ tagline }} </p>
+          <p><span class='movie-datails__attr'>Revenue: </span> {{ revenue }} </p>
         </div>
       </div>
-      <div id='cont-description-infor'>
+      <div id='movie-datails__overview'>
         <p>{{ overview }}<p/>
       </div>
     </script>

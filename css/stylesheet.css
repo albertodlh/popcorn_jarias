@@ -92,7 +92,7 @@ header {
 }
 
 
-.title-seccion {
+.title-seccion, .movie-datails__title {
   border-bottom: solid black 1px;
   color: red;
   font-family: arial;
@@ -116,7 +116,7 @@ section > p {
   margin-top: 25px;
 }
 
-.movie-datails__inf__img {
+.movie-datails__img {
   margin: 5px 10px 0 0;
   height: 200px;
   width: 300px;
@@ -129,11 +129,11 @@ section > p {
   display: inline-block;
 }
 
-.movie-datails__inf__attr {
+.movie-datails__attr-list {
   display: inline-block;
   float: right;
 }
-.movie-datails__info__attr__title-data {
+.movie-datails__attr {
   font-family: sans-serif;
   font-weight: bold;
   color: red;
