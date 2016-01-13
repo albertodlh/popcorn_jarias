@@ -8,13 +8,13 @@
     <link type="image/x-icon" href="images/popcorn-logo.gif" rel="shortcut icon" /> 
 
     <script id="movie-template" type="text/x-handlebars-template">
-      <h1 class='sub-title'>Information</h1>
-      <div class='cont-image-infor'>
-        <img class='backdrop_path' src='http://image.tmdb.org/t/p/w300/{{ backdrop_path }}' />
-        <div class='cont-data-infor'>
-          <p><span class='title-data'>Title: </span> {{ original_title }} </p>
-          <p><span class='title-data'>Tagline: </span> {{ tagline }} </p>
-          <p><span class='title-data'>Revenue: </span> {{ revenue }} </p>
+      <h1 class='movie-datails__title-seccion'>Information</h1>
+      <div class='movie-datails__inf'>
+        <img class='movie-datails__inf__img' src='http://image.tmdb.org/t/p/w300/{{ backdrop_path }}' />
+        <div class='movie-datails__inf__attr'>
+          <p><span class='movie-datails__info__attr__title-data'>Title: </span> {{ original_title }} </p>
+          <p><span class='movie-datails__info__attr__title-data'>Tagline: </span> {{ tagline }} </p>
+          <p><span class='movie-datails__info__attr__title-data'>Revenue: </span> {{ revenue }} </p>
         </div>
       </div>
       <div id='cont-description-infor'>
@@ -53,7 +53,7 @@
       <div>
 
         <section class="secciones">
-          <div id="container-information">
+          <div id="container-information" class="movie-datails">
 
           </div>
         </section>
