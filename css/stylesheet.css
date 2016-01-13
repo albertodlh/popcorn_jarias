@@ -92,7 +92,7 @@ header {
 }
 
 
-.movie-datails__title-seccion {
+.title-seccion {
   border-bottom: solid black 1px;
   color: red;
   font-family: arial;
@@ -125,7 +125,7 @@ section > p {
   border-radius: 5px;
 }
 
-.movie-datails__inf {
+.movie-datails__inf, .js-movie-container{
   display: inline-block;
 }
 
