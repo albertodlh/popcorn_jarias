@@ -27,14 +27,14 @@ function peliculas(tipo){
       imgSrc = 'http://image.tmdb.org/t/p/w300/' + data.results[i].poster_path;
       $imgEl = $('<img/>')
         .addClass('images-peliculas')
-        .addClass('Inactivo')
-        .attr('id', data.results[i].id)
+        .addClass('js-movie-' + data.results[i].id)
         .attr('src', imgSrc)
         .data('movieId', data.results[i].id)
         .data('imageId', imgSrc)
         .data('identificador', (i + 1))
-        .on('click', favorites);
-      $("#" + tipo).append($imgEl);
+        .data('active', false)
+        .on('click', favorites)
+        .appendTo("#" + tipo);
     };
   });
 }
@@ -43,30 +43,28 @@ function favorites(){
   var url = $(this).data('imageId');
   var id = $(this).data('movieId');
   var identificador = $(this).data('identificador');
-  if($('#' + id).hasClass('Inactivo')){
-    $('#' + id).removeClass('Inactivo');
-    $('#' + id).addClass('Activo');
+  var isActive = $(this).data('active');
+  var movieList = $('.js-movie-' + id);
 
-      var $imgFa = $('<img/>')
+  if(!isActive){
+    movieList.addClass('is-active');
+    movieList.data('active', true);
+
+    var $imgFa = $('<img/>')
       .addClass('images-peliculas')
-      .attr('id', identificador)
+      .addClass('js-favorite-'+id)
       .attr('src', url)
-      .data('movieId', $(this).data('movieId'))
-      .on('click', information);
-      $('#favorites').append($imgFa);
-  }else if($('#' + id).hasClass('Activo')){
-    $('#' + id).removeClass('Activo');
-    $('#' + id).addClass('Inactivo');
+      .data('movieId', id)
+      .on('click', information)
+      .appendTo('#favorites');
 
-    $('#' + identificador).remove();
+  }else{
+    movieList.removeClass('is-active');
+    movieList.data('active', false);
+
+    $('.js-favorite-'+id).remove();
     $('#container-information').html("");
   }
-
-  //if ($(".Activo").length > 0) {
-    
-  //}else {
-    //alert('entro al no  ' + id.length(2);
-    
 }
 
 $(function(){

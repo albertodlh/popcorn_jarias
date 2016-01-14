@@ -140,11 +140,11 @@ section > p {
   color: red;
 }
 
-.Activo {
+.is-active {
   opacity: 0.5;
 }
 
-.Inactivo {
+/*.Inactivo {
   opacity: 1;
-}
+}*/
 
