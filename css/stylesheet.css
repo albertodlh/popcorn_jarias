@@ -108,6 +108,7 @@ header {
   height: 200px;
   margin: 20px 3.9px 0;
   width: 130px;
+  cursor: pointer;
 }
 
 section > p {
@@ -137,5 +138,13 @@ section > p {
   font-family: sans-serif;
   font-weight: bold;
   color: red;
+}
+
+.Activo {
+  opacity: 0.5;
+}
+
+.Inactivo {
+  opacity: 1;
 }
 
