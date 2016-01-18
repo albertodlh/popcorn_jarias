@@ -8,7 +8,7 @@
     <link type="image/x-icon" href="images/popcorn-logo.gif" rel="shortcut icon" /> 
 
     <script id="movie-template" type="text/x-handlebars-template">
-      <h1 class='movie-datails__title'>Information</h1>
+      <div><h1 class='movie-datails__title'>Information</h1><span class="movie-datails__exit" onclick="ocultar_popup();">X</span></div>
       <div class='movie-datails__inf'>
         <img class='movie-datails__img' src='http://image.tmdb.org/t/p/w300/{{ backdrop_path }}' />
         <div class='movie-datails__attr-list'>
@@ -67,7 +67,7 @@
         <input id="search" type="search" size="90" placeholder="Search for movies..."/>
       </div>
       <div>
-        <section class="secciones">
+        <section id="popup" class="popup"><!--secciones">-->
           <div id="container-information" class="movie-datails">
 
           </div>

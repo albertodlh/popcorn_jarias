@@ -13,10 +13,16 @@ function listado(){
 }
 
 function information(id) {
+  $("#popup").show();
   $.get(apiBaseUrl + id + apiKeyString, function(data){
     var compiledHtml = movieDetailsTemplate(data);
     $("#container-information").html(compiledHtml);
   });
+}
+
+function ocultar_popup(){
+  $("#container-information").html("");
+  $("#popup").hide();
 }
 
 function peliculas(tipo){
@@ -52,12 +58,12 @@ function favorites(poster, id){
     $('.js-favorite-' + id).remove();
     if ($('#favorites').find('img').length == 0) {
       $("#favorites").html("<p class='text-in-favorites'>You haven't favorited any movies yet</p>");
-      $('#container-information').html("");
     };
   }
 }
 
 $(function(){
+  ocultar_popup();
   $('.js-movie-container').each(function(inx){
     peliculas(this.id);
   });
