@@ -101,15 +101,6 @@ header {
 .secciones{
   margin-top: 40px;
 }
-.images-peliculas {
-  border-radius: 5px;
-  border-right: 3px solid red;
-  border-top: 3px solid red;
-  height: 200px;
-  margin: 20px 3.9px 0;
-  width: 130px;
-  cursor: pointer;
-}
 
 section > p {
   color: gray;
@@ -117,13 +108,18 @@ section > p {
   margin-top: 25px;
 }
 
+.movie-datails {
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
 .movie-datails__img {
-  margin: 5px 10px 0 0;
-  height: 200px;
-  width: 300px;
+  border-radius: 5px;
   border-right: 3px solid red;
   border-top: 3px solid red;
-  border-radius: 5px;
+  height: 200px;
+  margin: 5px 10px 0 0;
+  width: 300px;
 }
 
 .movie-datails__inf, .js-movie-container{
@@ -132,16 +128,107 @@ section > p {
 
 .movie-datails__attr-list {
   display: inline-block;
-  float: right;
+  vertical-align: top;
+  margin-top: 5px;
 }
 .movie-datails__attr {
+  color: red;
   font-family: sans-serif;
   font-weight: bold;
-  color: red;
 }
 
 .is-active {
   opacity: 0.5;
 }
 
+.moviesCards {
+  display: inline-block;
+  height: 227px;
+  width: 44.6%;
+} 
+
+.moviesCards__img, .images-peliculas {
+  border-radius: 5px;
+  border-right: 3px solid red;
+  border-top: 3px solid red;
+  cursor: pointer;
+  height: 200px;
+  width: 130px;
+}
+
+.images-peliculas {
+  margin: 5.5px;
+}
+
+.moviesCards {
+  background-color: #F1EDDE;
+  border: solid 3px #E0ECDD;
+  margin: 4px;
+  padding: 15px;
+}
+
+.moviesCards__container-text {
+  display: inline-block;
+  vertical-align: top;
+  width: 52%;
+}
+
+.moviesCards__container-img {
+  display: inline-block;
+  width: 40%;
+}
+
+.moviesCards__title {
+  color: red;
+  font-family: sans-serif;
+  font-size: 15px;
+  margin-bottom: 7px;
+}
+.moviesCards__release-date, .moviesCards__overview {
+  font-size: 9.75px;
+}
+
+.moviesCards__overview {
+  font-family: sans-serif;
+  margin-bottom: 5px;
+} 
+
+.moviesCards__release-date {
+  color: gray;
+  font-weight: bold;
+}
+
+.moviesCards__botones {
+  background-color: gray;
+  border-radius: 4px;
+  border: gray;
+  color: white;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 5px 0;
+  text-align: center;
+  width: 90px;
+}
+
+.color-red {
+  background-color: red;
+}
+
+.moviesCards__botones:hover {
+  background-color: white;
+  color: red;
+}
+.text-in-favorites {
+  color: gray;
+  font-family: sans-serif;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.no-favorite {
+  background-color: yellow;
+  color: red;
+  border: solid red 1px;
+}
 
