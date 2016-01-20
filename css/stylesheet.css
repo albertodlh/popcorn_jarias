@@ -98,21 +98,27 @@ header {
   font-family: arial;
 }
 
+.movie-datails__overview {
+  border-top: 1px solid;
+  margin-top: 3px; 
+  padding: 10px 5px 5px;
+}
+
 .movie-datails__exit {
+  color: rgba(0,0,0,0.8);
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 3px 6px;
   position: absolute;
   right: 24px;
   top: 12px;
-  padding: 3px 6px;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: rgba(0,0,0,0.8);
 }
 
 .movie-datails__exit:hover {
   background-color: red;
-  padding: 3px 6px;
   border-radius: 14px;
   color: white;
+  padding: 3px 6px;
 }
 
 .secciones{
@@ -126,16 +132,17 @@ section > p {
 }
 
 .movie-datails {
-  font-family: sans-serif;
-  font-size: 15px;
   background-color: white;
-  position: absolute;
-  top: 132px;
-  left: 210px;
-  width: 816px;
-  padding: 13px;
   border-radius: 28px;
   border: 2px solid rgba(0,0,0,0.8);
+  box-shadow: 39px 32px 26px rgba(0,0,0,0.5);
+  font-family: sans-serif;
+  font-size: 15px;
+  left: 210px;
+  padding: 13px;
+  position: absolute;
+  top: 132px;
+  width: 816px;
 }
 
 .movie-datails__img {
@@ -198,6 +205,12 @@ section > p {
   width: 52%;
 }
 
+.moviesCards-container-text__parrafo {
+  height: 164px;
+  margin-bottom: 15px;
+  overflow: auto;
+}
+
 .moviesCards__container-img {
   display: inline-block;
   width: 40%;
@@ -223,7 +236,7 @@ section > p {
   font-weight: bold;
 }
 
-.moviesCards__botones {
+.moviesCards__botons {
   background-color: gray;
   border-radius: 4px;
   border: gray;
@@ -240,7 +253,7 @@ section > p {
   background-color: red;
 }
 
-.moviesCards__botones:hover {
+.moviesCards__botons:hover {
   background-color: white;
   color: red;
 }
@@ -258,13 +271,13 @@ section > p {
 }
 
 .popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
   background-color: rgba(0,0,0,0.5); 
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
 

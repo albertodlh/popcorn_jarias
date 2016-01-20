@@ -8,7 +8,7 @@
     <link type="image/x-icon" href="images/popcorn-logo.gif" rel="shortcut icon" /> 
 
     <script id="movie-template" type="text/x-handlebars-template">
-      <div><h1 class='movie-datails__title'>Information</h1><span class="movie-datails__exit" onclick="ocultar_popup();">X</span></div>
+      <div><h1 class='movie-datails__title'>Information</h1><span class="movie-datails__exit" onclick="hide_popup();">X</span></div>
       <div class='movie-datails__inf'>
         <img class='movie-datails__img' src='http://image.tmdb.org/t/p/w300/{{ backdrop_path }}' />
         <div class='movie-datails__attr-list'>
@@ -17,9 +17,9 @@
           <p><span class='movie-datails__attr'>Revenue: </span> {{ revenue }} </p>
       </div>
         </div>
-      <div id='movie-datails__overview'>
+      <div id='movie-datails__overview' class="movie-datails__overview">
         <p>{{ overview }}<p/>
-      </div>
+      </div>      
     </script>
 
     <script id="cards-template" type="text/x-handlebars-template">
@@ -29,11 +29,13 @@
           <img title="{{ title }}" class="moviesCards__img js-movie-{{ id }}" src="http://image.tmdb.org/t/p/w300/{{ poster_path }}" data-status="false"/>
         </div>
         <div class="moviesCards__container-text">
-          <p class="moviesCards__release-date"> {{ release_date }} </p>
-          <p class="moviesCards__overview"> {{ overview }} </p>
-          <div class="moviesCards__acciones">
-            <input class="moviesCards__botones" size="40" type="submit" value="Details" onclick="information('{{ id }}');"/>
-            <input class="moviesCards__botones color-red js-botones-{{ id }}" size="40" type="submit" value="Favorite" onclick="favorites('{{ poster_path }}', {{ id }});"/>
+          <div class="moviesCards-container-text__parrafo">
+            <p class="moviesCards__release-date"> {{ release_date }} </p>
+            <p class="moviesCards__overview"> {{ overview }} </p>
+          </div>
+          <div class="moviesCards__actions">
+            <input class="moviesCards__botons" size="40" type="submit" value="Details" onclick="information('{{ id }}');"/>
+            <input class="moviesCards__botons color-red js-botones-{{ id }}" size="40" type="submit" value="Favorite" onclick="favorites('{{ poster_path }}', {{ id }});"/>
           </div>
         </div>
      </div>
@@ -67,12 +69,6 @@
         <input id="search" type="search" size="90" placeholder="Search for movies..."/>
       </div>
       <div>
-        <section id="popup" class="popup"><!--secciones">-->
-          <div id="container-information" class="movie-datails">
-
-          </div>
-        </section>
-
         <section class="secciones">
           <h1 class='title-seccion'>Favorites</h1>
           <div id="favorites" class='js-movie-container'>
@@ -109,5 +105,10 @@
         </section>
       </div>
     </div>
+    <section id="popup" class="popup"><!--secciones">-->
+      <div id="container-information" class="movie-datails">
+
+      </div>
+    </section>
   </body>
 </html>

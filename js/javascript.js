@@ -3,7 +3,7 @@ var apiKeyString = '?api_key=300d2fb47e3f5f8d5e569ce27884acdc';
 var movieDetailsTemplate = Handlebars.compile($("#movie-template").html());
 var cardsTemplate = Handlebars.compile($('#cards-template').html());
 
-function listado(){
+function list(){
   $.get(apiBaseUrl + "top_rated" + apiKeyString, function( data ) {
     console.log( data );
     for (var i = 0; i < data.results.length; i++) {
@@ -20,7 +20,7 @@ function information(id) {
   });
 }
 
-function ocultar_popup(){
+function hide_popup(){
   $("#container-information").html("");
   $("#popup").hide();
 }
@@ -61,12 +61,13 @@ function favorites(poster, id){
     };
   }
 }
-
-$(function(){
-  ocultar_popup();
+$(document).on('ready', function(){
+  hide_popup();
   $('.js-movie-container').each(function(inx){
     peliculas(this.id);
   });
+  $('body').on('click', '.test', function(){
+    $(this).css('background', 'red');
+  });
 });
-
 
